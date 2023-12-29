@@ -18,7 +18,7 @@ for index, row in stations.iterrows():
     connexion = row['connexion']
     if not pd.isna(connexion):
         station_connectee = stations[stations['id_gares'] == connexion].iloc[0]
-        plt.plot([row['x'], station_connectee['x']], [row['y'], station_connectee['y']], color=row['color'])
+        plt.plot([row['x'], station_connectee['x']], [row['y'], station_connectee['y']], linestyle=row['style'], color=row['color'])
 
 
 
